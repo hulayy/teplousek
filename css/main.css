@@ -461,16 +461,16 @@ table thead th { /* Buňky v záhlaví */
 }
 
 #kontakt span, #kontakt label {
-    display: block; /* Každý řádek (Jméno, e-mail, Zpráva) na novém řádku */
-    margin-bottom: 10px; /* Mezera mezi jednotlivými řádky */
+    display: block; 
+    margin-bottom: 10px; 
     font-weight: bold;
 }
 
 #kontakt input[type="text"] {
-    border: none; /* Odebrání okrajů inputů */
-    border-bottom: 1px solid #000; /* Přidání spodního okraje */
-    margin-bottom: 10px; /* Mezera pod každým inputem */
-    padding: 5px; /* Odsazení textu od okraje inputu */
+    border: none;
+    border-bottom: 1px solid #000; 
+    margin-bottom: 10px; 
+    padding: 5px; 
     margin-left: 1em;
     width: 40%;
     outline: none;
@@ -495,16 +495,16 @@ table thead th { /* Buňky v záhlaví */
 
 
 #kontakt label {
-    display: block; /* Každý popisek na novém řádku */
-    margin-bottom: 5px; /* Mezera pod každým popiskem */
+    display: block; 
+    margin-bottom: 5px; 
 }
 
 #kontakt button {
     background-color: #65b9d4;
-    color: white; /* Barva textu tlačítka */
-    padding: 10px; /* Odsazení textu od okraje tlačítka */
-    border: none; /* Odebrání okrajů tlačítka */
-    cursor: pointer; /* Změna kurzoru na ruku při najetí na tlačítko */
+    color: white; 
+    padding: 10px; 
+    border: none; 
+    cursor: pointer; 
     width: 40%;
     margin-top: 20px;
     margin-left: 15em;
@@ -595,10 +595,10 @@ i {
 
 #potvrzeni-page a {
     background-color: #65b9d4;
-    color: white; /* Barva textu tlačítka */
-    padding: 10px; /* Odsazení textu od okraje tlačítka */
-    border: none; /* Odebrání okrajů tlačítka */
-    cursor: pointer; /* Změna kurzoru na ruku při najetí na tlačítko */
+    color: white; 
+    padding: 10px; 
+    border: none; 
+    cursor: pointer; 
     transition: .3s ease-in-out;
     text-decoration: none;
     border-radius: 10px 10px;

@@ -32,7 +32,7 @@
     $mail->addAddress("prosekadam@gmail.com", "Adam"); //Změnit
     $mail->AddReplyTo($email, $krestni);
 
-    $mail->Subject = "[3JM.cz]: Nová zpráva od klienta.";
+    $mail->Subject = "[3JM.cz]: Nova zprava od klienta.";
     $mail->Body = $obsah;
 
     $mail->send();
