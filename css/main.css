@@ -572,6 +572,46 @@ i {
 }
 
 
+/* POTVRZENI */
+#potvrzeni-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* zajistí, aby byl obsah vycentrován vertikálně na celou výšku okna prohlížeče */
+}
+
+#potvrzeni-page i {
+    transform: scale(5);
+    padding: 20px;
+    color: blue;
+}
+
+#potvrzeni-page h1 {
+    font-size: 3em;
+    color: #65b9d4;
+    text-align: center;
+}
+
+#potvrzeni-page a {
+    background-color: #65b9d4;
+    color: white; /* Barva textu tlačítka */
+    padding: 10px; /* Odsazení textu od okraje tlačítka */
+    border: none; /* Odebrání okrajů tlačítka */
+    cursor: pointer; /* Změna kurzoru na ruku při najetí na tlačítko */
+    transition: .3s ease-in-out;
+    text-decoration: none;
+    border-radius: 10px 10px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+#potvrzeni-page a:hover {
+    background-color: blue;
+    box-shadow: 7px 7px #1f1f1f56;
+    transform: translate(-7px, -7px);
+}
+
 /* Media query pro obrazovky s maximální šířkou 480px */
 @media only screen and (max-width: 480px) {
     /* Úpravy pro obrazovky s maximální šířkou 480px */

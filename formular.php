@@ -5,21 +5,37 @@
     $email = $_POST["email"];
     $zprava = $_POST["zprava"];
 
-    $cilovy_email = "prosekadam@gmail.com"; //změnit na svůj
-
-    $subjekt = "[3JM.cz]: Nová zpráva od klienta.";
     $obsah = "Jméno: $krestni $prijmeni\n";
     $obsah .= "E-mail: $email\n";
     $obsah .= "Zpráva:\n$zprava";
 
-    $odeslano = mail($cilovy_email, $subjekt, $obsah);
+    require "vendor/autoload.php";
 
-    if ($odeslano) {
-        echo "Zpráva byla úspěšně odeslána. Ozveme se Vám během následujících několika dnů.";
-    } else {
-        echo "Došlo k chybě při odesílání.";
-    }
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    
+    $mail = new PHPMailer(true);
 
-    header("Location: index.html");
-    exit();
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+
+    $mail->isSMTP();
+    $mail->SMTPAuth = true;
+
+    $mail->Host = "smtp.gmail.com";
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+
+    $mail->Username = "prosekadam@gmail.com";
+    $mail->Password = "stlf rnzh paoo royr";
+
+    $mail->setFrom($email, $krestni);
+    $mail->addAddress("prosekadam@gmail.com", "Adam"); //Změnit
+    $mail->AddReplyTo($email, $krestni);
+
+    $mail->Subject = "[3JM.cz]: Nová zpráva od klienta.";
+    $mail->Body = $obsah;
+
+    $mail->send();
+
+    header("Location: zprava-odeslana.html");
 ?>
