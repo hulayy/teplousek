@@ -1,0 +1,693 @@
+* {
+    font-family: 'Arial', sans-serif;
+}
+
+@font-face {
+    font-family: roundFont;
+    src: url(/font/roundFont.otf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+p {
+    overflow-wrap: break-word; /*Dělení slov*/
+    hyphens: auto; /*Dělení slov*/
+}
+
+/* ~~~~~~~~~~~~~ NAVIGACE ~~~~~~~~~~~~~ */
+header {
+    background-color: #F5F5F5;
+    color: #444444;
+    text-align: center;
+    padding: 2% 0;
+    position: sticky;
+    display: flex;
+    align-items: center; 
+}
+
+#logo img {
+    max-height: 110px; /* Přizpůsobte výšku obrázku podle potřeby */
+    margin-right: 110px; /* Volitelné nastavení okraje mezi logem a navigací */
+    padding-left: 120px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline;
+    margin-right: 50px;
+    
+}
+
+nav{
+    padding-left: 260px;
+}
+
+nav a {
+    color: #444444;
+    text-decoration: none;
+}
+
+header nav ul li a{
+    text-decoration: none; /* Žádné podtržení v základním stavu */
+    font-size: 20px;
+}
+
+header nav ul li a:hover { 
+    text-decoration: underline; /* Podtržení po najetí myší */
+    color:rgb(56, 110, 211);
+}
+
+/* p{
+    text-align: center;
+    margin-top: 120px;
+    font-size: 14px;
+} */
+
+/* ~~~~~~~~~~~~~ MAIN OBSAH ~~~~~~~~~~~~~ */
+main {
+    margin: 20px auto;
+}
+
+/* UVOD */
+
+#uvod {
+    height: 50vh;
+    display: inline-flex;
+    width: 100%;
+    padding-bottom: 5vh;
+}
+
+.left-cont {
+    width: 35%;
+    height: 100%;
+}
+
+.text-cont {
+    width: 70%;
+    height: 50%;
+    position: relative;
+    top: 15%;
+    margin-inline: auto; /* Automaticky zarovná na střed horizontálně*/
+    text-align: center;
+}
+
+.left-cont p {
+    font-size: 1em;
+    color: #1f1f1f;
+}
+
+.left-cont .kontakt-btn {
+    width: 60%;
+    height: 25%;
+    background-color: blue;
+    color: white;
+    border: none;
+    font-size: 1em;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .3s ease-in-out; /* Přechod 0.3s při najetí i odjetí kurzoru */
+}
+
+.kontakt-btn:hover {
+    background-color: rgb(46, 0, 83);
+    cursor: pointer;
+}
+
+
+.right-cont {
+    width: 65%;
+    left: 35%;
+}
+
+.grid { /* Vytvoření gridu */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) repeat(2, 0);
+    grid-template-rows: repeat(2, 1fr) repeat(3, 0);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    height: 100%;
+}
+
+.div1, .div2, .div3, .div4 {
+    position: relative;
+    top: 1.5em;
+    left: 1em;
+    border: 1px solid blue;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2; background-image: url(../img/1.jpg); background-position: center; background-size: cover;}
+.div2 { grid-area: 1 / 2 / 2 / 3; background-image: url(../img/2.jpg); background-position: center; background-size: cover;}
+.div3 { grid-area: 2 / 1 / 3 / 3; background-image: url(../img/3.jpg); background-position: center; background-size: cover;}
+.div4 { grid-area: 1 / 3 / 3 / 4; background-image: url(../img/4.jpg); background-position: center; background-size: cover;}
+
+/* KONTAKT SEKCE */
+#kontakt-info {
+    width: 100%;
+    height: 20vh;
+    background-color: rgb(0, 0, 133);
+}
+
+#kontakt-info .cont {
+    height: 100%;
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+}
+
+#kontakt-info .cont h2 {
+    font-size: 2em;
+    height: 1.2em;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#kontakt-info .cont #email {
+    height: 1em;
+    color: white;
+    position: relative;
+    left: 25%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#kontakt-info .cont #telefon {
+    height: 1em;
+    color: white;
+    position: relative;
+    left: 45%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#kontakt-info .cont i span {
+    color: white;
+    padding-left: .5em;
+}
+
+.blue-txt {
+    color: blue;
+}
+
+/* O NAS */
+
+#o-nas {
+    margin-top: 20vh;
+    height: 50vh;
+}
+
+#o-nas h2 {
+    text-align: center;
+    width: 30%;
+    margin-inline: auto;
+}
+
+h2 .underline {
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 102, 255);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 25%; /*odsazení podržení od písma*/
+}
+
+.o-nas-box {
+    position: relative;
+    width: 15%;
+    height: 245px;
+    /* padding: 8px; */
+    background: #FFFFFF;
+    border-color: rgb(0, 0, 133);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-left: 25px; 
+    box-shadow: 10px 10px #1f1f1f56;
+}
+
+.o-nas-box h3 {
+    position: relative;
+    top: 20%;
+    text-align: center;
+    color: blue;
+    font-variant: small-caps;
+}
+
+.o-nas-box p {
+    position: relative;
+    top: 20%;
+    height: 50%;
+    font-size: 16px;
+    padding: 8px;
+    text-align: justify;
+    color: #444444;
+}
+
+#o-nas-ic {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em!important;
+    top: 10%;
+    color: rgb(0, 0, 133);
+}
+
+.flex-container, .sluzby-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+/* SLUZBY */
+
+#sluzby {
+    margin-top: 10vh;
+    height: 80vh;
+}
+
+#sluzby h2 {
+    text-align: center;
+}
+
+.sluzby-box{
+    position: relative;
+    width: 30%;
+    height: 245px;
+    /* padding: 8px; */
+    background: #FFFFFF;
+    border-color: rgb(0, 0, 133);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-left: 25px; 
+    box-shadow: 10px 10px #1f1f1f56;
+}
+
+.sluzby-box h3 {
+    position: relative;
+    top: 20%;
+    text-align: center;
+    color: blue;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 102, 255);
+    text-decoration-thickness: 3px;
+    text-decoration-style: dashed;
+    text-underline-offset: 25%; /*odsazení podržení od písma*/
+}
+
+.sluzby-box p {
+    position: relative;
+    top: 20%;
+    height: 45%;
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+    color: #444444;
+}
+
+#sluzby-ic {
+    position: absolute;
+    left: 15%;
+    transform: translateX(-50%);
+    font-size: 3em!important;
+    top: -10%;
+    color: rgb(0, 0, 133);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 5px 7px #1f1f1f56;
+    border: 2px solid rgb(0, 0, 133);
+    padding: 5px;
+}
+
+/* CLANEK */
+#clanek {
+    height: 80vh;
+}
+
+#clanek h2 {
+    text-align: center;
+}
+
+.art-cont {
+    width: 90%;
+    /* height: 100%; */
+    margin-inline: auto;
+    display: flex;
+}
+
+.art-cont .left {
+    border: 2px solid blue;
+    margin: 20px;
+    border-radius: 10px 10px;
+    box-shadow: 10px 10px #1f1f1f56;
+    width: 40%;
+    margin-left: 15%;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background-color: white;
+    text-align: justify;
+    font-size: 1.1em;
+    color: #444444;
+}
+
+.art-cont img {
+    transform: scale(0.7);
+    border: 2px solid blue;
+    border-radius: 10px 10px;
+    position: absolute;
+    left: 45%;
+    z-index: -1;
+}
+
+/* CENIK */
+#cenik {
+    height: 50vh;
+}
+
+#cenik h2 {
+    text-align: center;
+}
+
+table { /* Tabulka */
+    border: 4px solid #555555;
+    background-color: #FFFFFF;
+    width: 70%;
+    margin-inline: auto;
+    text-align: center;
+    border-collapse: collapse;
+    height: 30vh;
+    box-shadow: 10px 10px #1f1f1f56;
+}
+
+table td, table th { /* Buňky v tabulce td = tělo tabulky | th = buňky v záhlaví tabulky */
+    border: 1px solid #555555;
+    padding: 5px 10px;
+}
+
+table thead th:last-child {
+    border-bottom: 1px solid #555555;
+}
+
+table tbody td { /* tbody = tělo tabulky */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+table td:last-child { /* Pro všechny buňky (td), které jsou na posledním místě v řádku (poslední řada)*/
+    background: #65b9d4;    
+    border: 1px solid #555555;
+}
+
+table thead { /* Záhlaví tabulky*/
+    background: #65b9d4;
+    border-bottom: 1px solid #555555;
+}
+
+table thead th { /* Buňky v záhlaví */
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    border-left: 2px solid #65b9d4;
+}
+/* ~~~~~~~~~~~~~ KONTAKT ~~~~~~~~~~~~~ */
+#kontakt {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#kontakt form {
+    width: 50%;
+    height: 100%;
+    border: 2px solid blue;
+    border-radius: 20px 20px;
+    margin-inline: auto;
+    margin-top: 30px;
+    box-shadow: 10px 10px #1f1f1f56;
+}
+
+#kontakt form .cont {
+    width: 75%;
+    height: 50%;
+    margin-top: 2em;
+    margin-inline: auto;
+    justify-content: center;
+}
+
+#kontakt h3 {
+    margin: 0;
+    text-align: center;
+    color: blue;
+    text-shadow: 3px 3px 4px #65b9d4; 
+    font-size: 3em;
+}
+
+#kontakt span, #kontakt label {
+    display: block; /* Každý řádek (Jméno, e-mail, Zpráva) na novém řádku */
+    margin-bottom: 10px; /* Mezera mezi jednotlivými řádky */
+    font-weight: bold;
+}
+
+#kontakt input[type="text"] {
+    border: none; /* Odebrání okrajů inputů */
+    border-bottom: 1px solid #000; /* Přidání spodního okraje */
+    margin-bottom: 10px; /* Mezera pod každým inputem */
+    padding: 5px; /* Odsazení textu od okraje inputu */
+    margin-left: 1em;
+    width: 40%;
+    outline: none;
+    color: blue;
+}
+
+#kontakt .email input, #kontakt textarea {
+    margin-left: 1.3em;
+    width: 84%;
+}
+
+#kontakt textarea {
+    border: 1px solid blue;
+    box-shadow: 10px 10px #1f1f1f56;
+    margin-bottom: 10px; 
+    padding: 5px; 
+    margin-left: 4em;
+    outline: none;
+    font-size: 1.1em;
+    min-height: 150px;
+}
+
+
+#kontakt label {
+    display: block; /* Každý popisek na novém řádku */
+    margin-bottom: 5px; /* Mezera pod každým popiskem */
+}
+
+#kontakt button {
+    background-color: #65b9d4;
+    color: white; /* Barva textu tlačítka */
+    padding: 10px; /* Odsazení textu od okraje tlačítka */
+    border: none; /* Odebrání okrajů tlačítka */
+    cursor: pointer; /* Změna kurzoru na ruku při najetí na tlačítko */
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 15em;
+    transition: .3s ease-in-out;
+}
+
+#kontakt button:hover {
+    background-color: blue;
+    box-shadow: 7px 7px #1f1f1f56;
+    transform: translate(-7px, -7px);
+}
+
+/* ~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~ */
+footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 25vh;
+    padding-top: 20px;
+    background: #EBEBEB;
+    margin: 0!important;
+}
+
+/* Styl pro jednotlivé prvky v patičce */
+footer h2{
+    margin-inline: auto;
+}
+
+footer .adresa {
+    text-align: center;  
+}
+
+footer .telefon {
+    text-align: center;
+}
+
+footer .email {
+    text-align: center; 
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    position: relative;
+    bottom: 0;
+}
+
+footer h3 {
+    margin-top: 0px; 
+    font-size: 15px;
+}
+
+footer img {
+    position: absolute;
+    width: 10%;
+    bottom: 25%;
+    right: 80%;
+}
+
+/* IKONKY */
+i {
+    transform: scale(2.0);
+}
+
+
+/* Media query pro obrazovky s maximální šířkou 480px */
+@media only screen and (max-width: 480px) {
+    /* Úpravy pro obrazovky s maximální šířkou 480px */
+
+    header {
+        padding: 5% 0;
+    }
+
+    #logo img {
+        max-height: 80px;
+        margin-right: 20px;
+        padding-left: 20px;
+    }
+
+    nav ul {
+        padding-left: 10px;
+    }
+
+    nav li {
+        margin-right: 20px;
+    }
+
+    nav {
+        padding-left: 20px;
+    }
+
+    main {
+        margin: 10px auto;
+    }
+
+    #uvod {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(../img/NORMAL-Shutterstock-1066126052.jpg);
+        background-size: cover;
+    }
+
+    .left-cont {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .left-cont .text-cont {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-cont .kontakt-btn {
+        width: 80%;
+        height: 30%;
+    }
+
+    .right-cont {
+        display: none;
+    }
+
+    /* .right-cont .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .div1, .div2, .div3, .div4 {
+        position: relative;
+        top: 0;
+        left: 0;
+    } */
+
+    #kontakt-info .cont {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #kontakt-info .cont #email, #kontakt-info .cont #telefon {
+        left: 0;
+    }
+
+    #kontakt-info .cont i {
+        margin-top: 10px;
+    }
+
+    #o-nas h2, #sluzby h2, #cenik h2 {
+        width: 100%;
+    }
+
+    .o-nas-box, .sluzby-box {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .o-nas-box h3, .sluzby-box h3 {
+        font-size: 1.5em;
+    }
+
+    #clanek .art-cont {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .art-cont img {
+        width: 100%;
+        left: 0;
+        margin-top: 20px;
+    }
+
+    #cenik table {
+        width: 100%;
+    }
+
+    footer h2 {
+        margin-bottom: 10px;
+    }
+
+    footer img {
+        width: 30%;
+        right: 35%;
+        bottom: 20%;
+    }
+}
