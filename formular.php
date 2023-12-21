@@ -20,5 +20,8 @@
         } else {
             echo "Došlo k chybě při odesílání.";
         }
+
+        header("Location: index.html");
+        exit();
     }
 ?>
